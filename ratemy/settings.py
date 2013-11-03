@@ -1,6 +1,5 @@
 # Django settings for ratemy project.
 import os
-import django
 DIRNAME = os.path.dirname(__file__)
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -74,7 +73,6 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(DIRNAME, 'static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -90,9 +88,9 @@ SECRET_KEY = '2^l1gwj=hw&hs_kak86=*_^2$4^l-w@dd8xc*47+4km^uz-&dc'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+   'django.template.loaders.filesystem.Loader',
+   'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.eggs.Loader',
 )
 
 
@@ -116,7 +114,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.,
-    os.path.join(DIRNAME, 'static', 'templates')
+    os.path.join(DIRNAME, 'templates')
 )
 
 INSTALLED_APPS = (
@@ -134,7 +132,7 @@ INSTALLED_APPS = (
     'south',
     'django_extensions',
     'taggit',
-    'social.apps.django_app.default'
+     'social.apps.django_app.default'
 
 
 )
